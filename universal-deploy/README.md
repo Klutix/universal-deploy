@@ -167,23 +167,6 @@ update_2026_03_20_120000/
   ]
 }
 ```
-
-## Migrating from the Original `deploy.py`
-
-If you're coming from the Jarvis-specific `deploy.py`:
-
-1. **Install the package**: `pip install .` (or `pip install universal-deploy`)
-2. **Run `deploy init`** in your project root
-3. **Edit `deploy.json`**:
-   - Set `bundle_prefix` to `"jarvis_update_"` (to match your existing bundles)
-   - Set `downloads_path` to your Windows Downloads path
-   - Set `project_root` to your project path
-   - Move your custom ignore entries (`piper/`, `gmail_credentials.json`, etc.) into the ignore arrays or a `.deployignore` file
-   - Set `commit_prefix` to `"[Jarvis Deploy]"` if you want to keep the same commit style
-   - Set `auto_update_readme` to `true` if you used the changelog feature
-4. **Set env vars**: `DEPLOY_GITHUB_TOKEN` replaces `GITHUB_TOKEN`
-5. **Legacy CLI still works**: `deploy --list`, `deploy --push --full`, etc. are translated automatically
-
 ## Project Structure
 
 ```
