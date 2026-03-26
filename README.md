@@ -85,7 +85,7 @@ These work with any command:
 
 | Flag | Description |
 |---|---|
-| `--voice` | Terse output optimized for voice assistants |
+| `-q`, `--quiet` | Suppress detailed output (terse single-line summary) |
 | `--config PATH` | Use a specific `deploy.json` instead of auto-discovery |
 | `--project-root PATH` | Override the project root directory |
 | `--downloads-path PATH` | Override the downloads/bundle source path |
@@ -447,14 +447,18 @@ deploy --config ~/configs/deploy-production.json
 deploy push --project-root /opt/production --config /etc/deploy/prod.json
 ```
 
-### Voice mode (for voice assistants)
+### Quiet mode (suppress detailed output)
 
 ```bash
-deploy --voice
+deploy -q
+# or
+deploy --quiet
 
-# Output (terse, no emojis):
+# Output (single terse line):
 # Applied 1 update bundle. 3 files updated.
 ```
+
+> **Note:** The legacy `--voice` flag still works (silently translated to `--quiet`) for backward compatibility.
 
 ---
 
