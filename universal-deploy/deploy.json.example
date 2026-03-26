@@ -1,0 +1,29 @@
+{
+  "project_root": ".",
+  "downloads_path": "~/Downloads",
+  "bundle_prefix": "update_",
+  "manifest_file": "update_manifest.json",
+  "deploy_log": "config/deploy_log.json",
+
+  "github_token": "",
+  "github_repo": "",
+
+  "push_ignore_dirs": [
+    "venv",
+    "__pycache__",
+    ".git",
+    "node_modules",
+    ".venv"
+  ],
+  "push_ignore_files": [
+    ".env"
+  ],
+  "push_ignore_extensions": [
+    ".pyc",
+    ".pyo",
+    ".log"
+  ],
+
+  "auto_update_readme": false,
+  "commit_prefix": "[Deploy]"
+}
